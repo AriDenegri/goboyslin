@@ -14,11 +14,11 @@ body {
     display: flex;
     justify-content: space-between; /* Para alinear elementos en los extremos */
     align-items: center;
-    padding: 10px 80px; /* Para agregar algo de espacio a los lados */
+    padding: 10px 45px; /* Para agregar algo de espacio a los lados */
 }
 
 .nav__img {
-    width: 15vh;
+    width: 20vh;
 }
 /* Estilo para el enlace */
 .underline__animated {
