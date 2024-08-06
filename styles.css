@@ -18,8 +18,7 @@ body {
 }
 
 .nav__img {
-    width: 10vh;
-    border-radius: 50px;
+    width: 15vh;
 }
 /* Estilo para el enlace */
 .underline__animated {
