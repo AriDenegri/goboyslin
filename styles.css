@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,6 +15,11 @@ body {
     justify-content: space-between; /* Para alinear elementos en los extremos */
     align-items: center;
     padding: 10px 80px; /* Para agregar algo de espacio a los lados */
+}
+
+.nav__img {
+    width: 10vh;
+    border-radius: 50px;
 }
 /* Estilo para el enlace */
 a {
@@ -37,6 +43,23 @@ a::after {
 a:hover::after {
     transform: scaleX(1);
 }
+
+#slash {
+    cursor: default;
+}
+
+#slash::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; 
+    background-color: black;
+    bottom: 5px; /* Ajusta la distancia de la línea respecto al texto */
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
 
 .list--title {
     display: flex;
@@ -90,8 +113,15 @@ a:hover::after {
     color: rgb(0, 0, 0);
     font-weight: bolder;
     display: flex;
+    transition: 0.8s;
+    font-size: 20px;
 }
 
+.link--button:hover {
+    transition: 0.8s;
+    background-color: #ff3faf;
+    color: #ffffb2;
+}
 .nav__item {
     display: inline-block;
 }
@@ -102,7 +132,7 @@ a:hover::after {
 }
 /* nav-bar Fin */
 
-/* title main Inicio */
+/* title main Inicio (ELIMINADO)*/
 .title {
     font-size: larger;
     margin: auto;
@@ -198,6 +228,106 @@ a:hover::after {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    color: white;
 }
 /* Footer Fin */
+
+
+
+
+
+
+
+
+
+/* Inicio Carrusel */
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(228, 228, 228, 0.904);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2.5em;
+    border-radius: 50px;
+    padding: 1.5em;
+    display: block;
+    gap: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.603);
+}
+
+
+/* Estilos iniciales para el contenido */
+.contenido {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: none; /* Oculta todo el contenido por defecto */
+}
+
+
+.contenido1 {
+    background-color: red;
+    height: 100vh;
+    
+
+}
+
+.contenido2 {
+    background-color: blue;
+    height: 100vh;
+    
+}
+
+.contenido3 {
+    background-color: green;
+    height: 100vh;
+}
+
+.contenido4 {
+    background-color: purple;
+    height: 100vh;
+}
+
+.contenido5 {
+    background-color: orange;
+    height: 100vh;
+}
+
+/* Estilo para el contenido visible */
+.contenido.visible {
+    display: block; /* Muestra el contenido visible */
+    opacity: 1; /* Asegúrate de que el contenido es completamente visible */
+}
+
+hr {
+    width: 100vh;
+    height: 5px;
+    color: rgba(105, 105, 105, 0.521);
+    background-color: #ffb2e1;
+    border-radius: 20px;
+}
+
+/* Fin de Carrusel */
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 80%;
+    background: #00000000;
+    margin: 0 auto; /* Centro el video */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    border: 0;
+}
+
 
