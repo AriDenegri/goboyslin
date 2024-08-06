@@ -80,6 +80,8 @@ a:hover::after {
     padding: 15px;
     background-color: rgba(0, 255, 191, 0);
     margin: 5px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .nav__title {
@@ -91,6 +93,8 @@ a:hover::after {
     padding: 15px;
     background-color: rgba(0, 255, 191, 0);
     margin: 5px;
+    cursor: default;
+    user-select: none;
 }
 /* Para que no funcione la barra hover en Account */
 #button::after {
