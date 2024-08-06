@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function() {
     // Lista de ids de botones y sus correspondientes contenidos
     const sections = [
@@ -6,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { buttonId: 'sobreLaCuevaButton', contentId: 'contenido2' },
         { buttonId: 'albumesButton', contentId: 'contenido3' },
         { buttonId: 'goblinsShopButton', contentId: 'contenido4' },
-        { buttonId: 'individualTrackButton', contentId: 'contenido5' }
+        { buttonId: 'individualTracksButton', contentId: 'contenido5' }
     ];
 
     // Función para manejar el clic en los botones
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const content = document.getElementById(section.contentId);
         
         button.addEventListener('click', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevenir la acción predeterminada del enlace
 
             // Desvanece el contenido actual
             const visibleContent = document.querySelector('.contenido.visible');
@@ -24,15 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Asegúrate de ocultar el contenido después de la transición
                 setTimeout(() => {
                     visibleContent.style.display = 'none';
-                }, 50); // Tiempo igual al de la transición de opacidad
+                }, 0.5); // Tiempo igual al de la transición de opacidad
             }
 
             // Muestra el nuevo contenido con desvanecimiento
             content.style.display = 'block';
             setTimeout(() => {
                 content.classList.add('visible');
-            }, 100); // Pequeño retraso para activar la transición
-            window.scrollTo(0, content.offsetTop);
+            }, 50); // Pequeño retraso para activar la transición
         });
     });
 });
