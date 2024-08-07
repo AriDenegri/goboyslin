@@ -5,8 +5,24 @@ html {
 
 body {
     font-family: Reem Kufi Fun, Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, green, black);
+    background: linear-gradient(to bottom, black, white);
 }
+/* Estilo de la Scrollbar Y */
+body::-webkit-scrollbar {
+    width: 10px;           
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(34, 34, 34);    
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(34, 34, 34);
+    border-radius: 20px; 
+    border: 2px solid rgba(0, 174, 255, 0.377); 
+  }
+
+
 
 /* nav-bar Inicio */
 .nav {
@@ -14,11 +30,19 @@ body {
     display: flex;
     justify-content: space-between; /* Para alinear elementos en los extremos */
     align-items: center;
-    padding: 10px 45px; /* Para agregar algo de espacio a los lados */
+    padding: 10px 35px; /* Para agregar algo de espacio a los lados */
 }
 
 .nav__img {
-    width: 20vh;
+    width: 22vh;
+    user-select: none;
+}
+
+.title--nav {
+    width: 35vh;
+    margin-left: 5vh;
+    user-select: none;
+    
 }
 /* Estilo para el enlace */
 .underline__animated {
@@ -32,7 +56,7 @@ body {
     position: absolute;
     width: 100%;
     height: 2px; 
-    background: linear-gradient(to left,#ffffb2,#ff3faf);
+    background: linear-gradient(to left,rgb(0, 174, 255),#ff119c);
     bottom: 5px; /* Ajusta la distancia de la línea respecto al texto */
     left: 0;
     transform: scaleX(0);
@@ -72,8 +96,8 @@ body {
 
 .nav__title {
     color: white;
-    font-family: Honk;
-    font-size: 50px;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 32px;
     text-decoration: none;
     display: inline-block;
     padding: 15px;
@@ -81,6 +105,7 @@ body {
     margin: 5px;
     cursor: default;
     user-select: none;
+    width: 30vh;
 }
 
 .link--button {
@@ -97,8 +122,8 @@ body {
 
 .link--button:hover {
     transition: 0.8s;
-    background-color: #ff3faf;
-    color: #ffffb2;
+    background-color: #ffffff;
+    color: #ff00ff;
 }
 .nav__item {
     display: inline-block;
@@ -135,10 +160,11 @@ body {
 
 .h2__slides {
     font-style: unset;
-    font-size: 8vh;
+    font-size: 6vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Press Start 2P", system-ui;
 }
 
 .text-slide {
@@ -183,8 +209,8 @@ body {
 
 .content--button:hover {
     transition: 0.8s;
-    background-color: #ff3faf;
-    color: #ffffb2;
+    background-color: #e6e5e5;
+    color: #ff3faf;
 }
 
 @keyframes slideInL {
@@ -218,6 +244,11 @@ body {
         opacity: 1;
         transform: translateY(90%);
     }
+}
+
+.animated-text {
+    display: inline-block;
+    animation: 3s ease-in-out forwards;
 }
 
 .animated-text-l {
@@ -295,7 +326,7 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: white;
+    color: black;
 }
 /* Footer Fin */
 
