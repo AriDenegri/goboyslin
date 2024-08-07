@@ -23,14 +23,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Asegúrate de ocultar el contenido después de la transición
                 setTimeout(() => {
                     visibleContent.style.display = 'none';
-                }, 0.5); // Tiempo igual al de la transición de opacidad
+                }, 500); // Tiempo igual al de la transición de opacidad
             }
 
             // Muestra el nuevo contenido con desvanecimiento
             content.style.display = 'block';
             setTimeout(() => {
                 content.classList.add('visible');
-            }, 50); // Pequeño retraso para activar la transición
+            }, 500); // Pequeño retraso para activar la transición
         });
     });
+
+    // Simula un clic en el botón "News" al cargar la página
+    document.getElementById('newsButton').click();
 });

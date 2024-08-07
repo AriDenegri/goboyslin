@@ -7,9 +7,9 @@ body {
     font-family: Reem Kufi Fun, Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, black, white);
 }
-/* Estilo de la Scrollbar Y */
+/* Estilo de la Scrollbar Y  (AHORA DESACTIVADA)*/
 body::-webkit-scrollbar {
-    width: 10px;           
+    width: 0px;           
   }
   
   body::-webkit-scrollbar-track {
@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: space-between; /* Para alinear elementos en los extremos */
     align-items: center;
-    padding: 10px 35px; /* Para agregar algo de espacio a los lados */
+    padding: 10px 30px; /* Para agregar algo de espacio a los lados */
 }
 
 .nav__img {
@@ -81,6 +81,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: flex-end; /* Para alinear los items a la derecha */
     flex-grow: 1;
+    margin-left: 10vh;
 }
 
 .nav__link {
