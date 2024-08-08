@@ -36,4 +36,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Simula un clic en el botón "News" al cargar la página
     document.getElementById('newsButton').click();
+
 });
